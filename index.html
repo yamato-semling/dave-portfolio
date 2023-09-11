@@ -7,14 +7,14 @@
     <script src="js/main.js" defer></script>
     <title>David Berner</title>
   </head>
-  <body>
+  <header></header>
+  <body onload="changeIcon()">
     <section id="hero">
-      <div class="semi-circle"></div>
+      <div class="right-circle"></div>
       <img
         id="hero-img"
         src="img/portrait/Berner_David-a.png"
-        alt="David Berner Portrait"
-      />
+        alt="David Berner Portrait" />
       <div class="quad-circle"></div>
       <div class="hero-text">
         <h1>David Berner</h1>
@@ -25,7 +25,17 @@
     </section>
     <section id="about">
       <div class="content">
-        <h1>Hallo</h1>
+        <h1 class="title">Meine Werte</h1>
+        <h2 class="subtitle" id="fortschritt" onmouseover="changeIcon(1)">
+          Fortschritt
+        </h2>
+        <h2 class="subtitle" id="tradition" onmouseover="changeIcon(2)">
+          Tradition
+        </h2>
+        <h2 class="subtitle" id="freiheit" onmouseover="changeIcon(3)">
+          Freiheit
+        </h2>
+        <div class="left-circle"></div>
       </div>
     </section>
   </body>
