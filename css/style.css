@@ -64,3 +64,15 @@ body h2::selection{
     color: var(--secondary-color);
     font-size: 7vh;
 }
+
+#about {
+    position: absolute;
+    top: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
