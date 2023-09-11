@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ff9b00;
+  --secondary-color: #003c69;
+  /* --primary-color: #18995f;
+  --secondary-color: #0e7f4c; */
+}
+@font-face {
+    font-family: "helvetica";
+    src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+
+body{
+    font-family: helvetica;
+}
+body h1::selection{
+    color: white;
+    background-color: var(--secondary-color);
+}
+body h2::selection{
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+#hero-img{
+    width: 35vw;
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    user-select: none;
+}
+
+.semi-circle {
+    position: absolute;
+    margin: 0;
+    background-color: var(--primary-color);
+    height: 100vh;
+    width: 60vw;
+    border-radius: 0 47vh 47vh 0;
+}
+
+.hero-text{
+    display: flex;
+    position: absolute;
+    top: 20vh;
+    right: 6vw;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.hero-text h1 {
+    color: var(--secondary-color);
+    font-size: 10vh;
+    margin-bottom: 3vh;
+}
+.hero-text h2 {
+    color: var(--secondary-color);
+    font-size: 7vh;
+}
