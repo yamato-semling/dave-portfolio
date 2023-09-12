@@ -38,6 +38,22 @@ body h2::selection {
   user-select: none;
 }
 
+header{
+    z-index: 7;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+#logos{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    height: 10vh;
+}
+
 .right-circle {
   position: absolute;
   margin: 0;
@@ -94,11 +110,18 @@ body h2::selection {
 }
 
 #about {
-  margin-top: 20vh;
+  margin-top: 25vh;
   position: absolute;
   top: 100%;
   width: 100%;
 }
+#me {
+    margin-top: 25vh;
+    position: absolute;
+    top: 200%;
+    width: 100%;
+  }
+
 
 .content {
   position: static;
