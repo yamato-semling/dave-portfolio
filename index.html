@@ -7,20 +7,7 @@
     <script src="js/main.js" defer></script>
     <title>David Berner</title>
   </head>
-  <header>
-    <div id="logos">
-      <a href="https://die-mitte.ch/" target="_blank">
-        <img class="logo1" src="img/logos/die_mitte.png" alt="die Mitte" />
-      </a>
-      <a href="https://diejungemitte.ch/" target="_blank">
-        <img
-          class="logo2"
-          src="img/logos/Die Junge Mitte_Bern-crop.png"
-          alt="die Junge Mitte Bern"
-        />
-      </a>
-    </div>
-  </header>
+  <header></header>
   <body onload="changeIcon()">
     <section id="hero">
       <div class="right-circle"></div>
@@ -29,15 +16,38 @@
         src="img/portrait/Berner_David-a.png"
         alt="David Berner Portrait"
       />
-      <div class="quad-circle"></div>
-      <div class="hero-text">
-        <h1>David Berner</h1>
-        <h2>Jung</h2>
-        <h2>Brutal</h2>
-        <h2>Gutaussehend</h2>
+      <div id="hero-content">
+        <div id="hero-right">
+          <div id="logos">
+            <a href="https://die-mitte.ch/" target="_blank">
+              <img
+                class="logo1"
+                src="img/logos/die_mitte.png"
+                alt="die Mitte"
+              />
+            </a>
+            <a href="https://diejungemitte.ch/" target="_blank">
+              <img
+                class="logo2"
+                src="img/logos/Die Junge Mitte_Bern-crop.png"
+                alt="die Junge Mitte Bern"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1>David Berner</h1>
+          <h2>Jung</h2>
+          <h2>Brutal</h2>
+          <h2>Gutaussehend</h2>
+        </div>
       </div>
     </section>
+
     <section id="about">
+      <div id="about-content">
+        <div class="left-circle icon-circle"></div>
+      </div>
       <div class="content">
         <h1 class="title">Meine Werte</h1>
         <h2 class="subtitle" id="fortschritt" onmouseover="changeIcon(1)">
@@ -49,7 +59,6 @@
         <h2 class="subtitle" id="freiheit" onmouseover="changeIcon(3)">
           Freiheit
         </h2>
-        <div class="left-circle"></div>
       </div>
     </section>
     <section id="me">
@@ -143,6 +152,49 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <section id="news">
+      <div class="content2">
+        <h1 class="title">Neues</h1>
+      </div>
+      <div id="news-content">
+        <div class="content-box">
+          <div class="news-box">
+            <h1>Nationalratswahlen 2023</h1>
+            <h3>2021 - Heute</h3>
+            <p>
+              Ich freue mich Sie informieren zu dürefen, dass ich mich für die
+              Nationalratswahlen 2023 im Wahlkreis Bern kandidiere.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              aliquam totam accusamus perferendis cumque iure, facilis
+              recusandae nobis laboriosam nemo, alias voluptatem odit incidunt
+              fugiat nostrum, corporis accusantium amet. Quia vero accusamus,
+              veritatis perferendis laudantium ex doloribus consectetur mollitia
+              debitis, ipsam amet esse delectus quos, facilis assumenda minus.
+              Cupiditate molestias consequatur modi, ab laudantium totam
+              recusandae numquam, natus culpa qui tempora dolore impedit, quae
+              repellat voluptas. Eaque assumenda modi voluptate aliquam, illo
+              ipsam incidunt, qui tempore nesciunt aut molestias cupiditate!
+              Esse delectus consequatur aliquid, cupiditate eaque blanditiis,
+              consectetur ab tempore in ad debitis? Tempora quam provident nihil
+              quisquam vitae officiis, optio placeat. Quam accusantium mollitia
+              omnis at illum recusandae ea beatae neque corporis deleniti?
+              Temporibus quis quo, suscipit fuga tempora voluptate rerum cum
+              autem voluptatibus, corrupti sint itaque fugiat quibusdam sed
+              veritatis quod accusantium. Dolorum veritatis ut sed ratione
+              laborum facere ab numquam accusamus dolor omnis asperiores
+              corrupti vero, consequatur, suscipit quam! Ex suscipit
+              voluptatibus ea veniam eum, sint totam dolorem repellendus
+              exercitationem, laborum tempore quam obcaecati dolorum repellat
+              tempora laudantium nulla eaque minus a. Nemo excepturi nostrum
+              veritatis sequi iusto eveniet unde, deleniti officia
+              necessitatibus. Corporis, optio cum non voluptatibus odit
+              accusamus perferendis adipisci qui atque ex vero! Porro!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

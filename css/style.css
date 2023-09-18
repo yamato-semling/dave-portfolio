@@ -15,24 +15,24 @@
   font-family: "helvetica";
   src: url(../fonts/Helvetica-Font/Helvetica.ttf);
 }
+::-webkit-scrollbar{
+  width: 1;
+}
 
 body {
   font-family: helvetica;
+
 }
-body h1::selection {
-  color: white;
-  background-color: var(--secondary-color);
-}
-body h2::selection {
+body h1::selection, h2::selection, h3::selection, h4::selection, p::selection, img::selection {
   color: white;
   background-color: var(--secondary-color);
 }
 
 #hero-img {
+  position: absolute;
   width: 36%;
   height: auto;
   z-index: 3;
-  position: absolute;
   bottom: 0;
   left: 0;
   user-select: none;
@@ -40,15 +40,15 @@ body h2::selection {
 
 header {
   z-index: 7;
-  position: absolute;
   top: 1vh;
   right: 1vh;
 }
 #logos {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
 }
 .logo1 {
   height: 9vh;
@@ -58,7 +58,6 @@ header {
 }
 
 .right-circle {
-  position: absolute;
   margin: 0;
   background-color: var(--primary-color);
   height: 100vh;
@@ -66,41 +65,27 @@ header {
   border-radius: 0 47vh 47vh 0;
 }
 .left-circle {
-  position: absolute;
   margin: 0;
   background-color: var(--primary-color);
   height: 100vh;
   width: 60vw;
   border-radius: 47vh 0 0 47vh;
-  right: 0;
 }
 
 .hero-text {
-  display: flex;
-  position: absolute;
-  top: 35vh;
-  right: 6vw;
-  align-items: flex-end;
-  flex-direction: column;
+  margin-top: 20vh;
+  text-align: right;
 }
 .hero-text h1 {
   color: var(--secondary-color);
-  font-size: 11vh;
+  font-size: 10vh;
   margin-bottom: 4vh;
-  box-shadow: inset 0 0 0 0 var(--primary-color);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .hero-text h2 {
   color: var(--secondary-color);
-  font-size: 7vh;
-  box-shadow: inset 0 0 0 0 var(--primary-color);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 6.5vh;
 }
-.hero-text h1:hover,
-.hero-text h2:hover {
-  box-shadow: inset 40vw 0 0 0 var(--primary-color);
-  color: var(--secondary-color);
-}
+
 
 .title {
   color: var(--secondary-color);
@@ -109,27 +94,31 @@ header {
 }
 .subtitle {
   color: var(--secondary-color);
-  font-size: 6vh;
+  font-size: 6.5vh;
 }
 
+#hero{
+  
+}
 #about {
-  margin-top: 25vh;
-  position: absolute;
-  top: 100%;
-  width: 100%;
+  width: 99vw;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 20vh;
 }
 #me {
-  margin-top: 25vh;
-  position: absolute;
-  top: 200%;
-  width: 100%;
+  margin-top: 20vh;
+}
+#news {
+  margin-top: 20vh;
 }
 
 .content {
-  position: static;
   display: flex;
+  height: 100vh;
+  justify-content: center;
   flex-direction: column;
-  margin-left: 6vw;
+  margin-left: 3vw;
 }
 .content h1,
 .content h2 {
@@ -142,13 +131,21 @@ header {
 .content h2:hover {
   box-shadow: inset 30vw 0 0 0 var(--primary-color);
   color: var(--secondary-color);
+  cursor: pointer;
+}
+
+#about-content{
+  position: absolute;
+  right: 0;
 }
 
 .icon {
-  position: absolute;
   height: 50vh;
-  right: 10vw;
-  top: 25vh;
+}
+.icon-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content2 {
@@ -158,6 +155,19 @@ header {
 .ilist {
   color: var(--secondary-color);
   font-size: 6vh;
+}
+
+
+#hero-content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  margin-right: 3vw;
+}
+#hero-right{
 }
 
 .contents {
@@ -174,6 +184,8 @@ header {
   flex-wrap: wrap;
   width: 100vw;
   height: 120%;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
 .box {
@@ -187,17 +199,17 @@ header {
 }
 
 .box h1 {
-  font-size: 4vh;
+  font-size: 3vh;
   margin: 3%;
   color: var(--secondary-color);
 }
 .box h3 {
-  font-size: 2.2vh;
+  font-size: 1.6vh;
   margin: 3%;
   color: rgb(110, 110, 110);
 }
 .box p {
-  font-size: 2.6vh;
+  font-size: 2vh;
   margin: 3%;
   color: var(--secondary-color);
 }
@@ -209,84 +221,107 @@ header {
   border-radius: 20px;
 }
 
+#news-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    top: 0;
+    margin-right: 2.5vw;
+    align-items: flex-end;
+}
+
+.news-box {
+  border-radius: 20px;
+  width: 800px;
+  height: 700px;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.news-box h1 {
+  font-size: 3vh;
+  margin: 3%;
+  color: var(--secondary-color);
+}
+.news-box h3 {
+  font-size: 1.6vh;
+  margin: 3%;
+  color: rgb(110, 110, 110);
+}
+.news-box p {
+  font-size: 2vh;
+  margin: 3%;
+  color: var(--secondary-color);
+}
+.news-box img {
+  margin: 3%;
+  width: 28%;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
   .hero-text {
     display: flex;
-    position: absolute;
-    top: 5vh;
-    left: 3vw;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 4vw;
+    margin-top: 0;
   }
   .hero-text h1 {
     color: var(--secondary-color);
     font-size: 8vh;
     width: 50vw;
     margin-bottom: 3vh;
-    box-shadow: inset 0 0 0 0 var(--primary-color);
-    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left; 
   }
   .hero-text h2 {
     color: var(--secondary-color);
     font-size: 4vh;
-    box-shadow: inset 0 0 0 0 var(--primary-color);
-    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-
-  .hero-text h1:hover,
-  .hero-text h2:hover,
-  .hero-text h3:hover {
-    box-shadow: inset 40vw 0 0 0 var(--primary-color);
-    color: var(--secondary-color);
-  }
-
-  #hero-img {
-    display: flex;
-    height: 50%;
-    width: auto;
-    z-index: 3;
-    position: absolute;
-    bottom: 0;
-    user-select: none;
-    box-shadow: 0px 15px 10px -15px #111;
+    text-align: left;
   }
 
   #about {
-    margin-top: 0;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-  }
-  #me {
-    margin-top: 25vh;
-    position: absolute;
-    top: 200%;
-    width: 100%;
+    width: 99vw;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0;
   }
 
+
+  #hero-img {
+    height: 45vh;
+    width: auto;
+    z-index: 10;
+    user-select: none;
+    box-shadow: 0px 15px 10px -15px #111;
+    margin-bottom: 0;
+  }
+  
   .right-circle {
-    position: absolute;
-    margin: 0;
-    background-color: var(--primary-color);
-    bottom: 0;
-    height: 93vh;
+    height: 100vh;
     width: 100vw;
+    margin-bottom: 0;
     border-radius: 0 75% 0 0;
   }
   .left-circle {
-    position: absolute;
-    margin: 0;
-    background-color: var(--primary-color);
-    height: 93vh;
+    margin-top: 0;
+    height: 100vh;
     width: 100vw;
+    margin-top: 0;
     border-radius: 0 0 0 75%;
+  }
+  
+  #about-content{
+    position: absolute;
     right: 0;
-    z-index: -1;
   }
 
   .title {
+    margin-top: 0;
     color: var(--secondary-color);
     font-size: 8vh;
   }
@@ -296,10 +331,7 @@ header {
   }
 
   #logos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
+    margin-bottom: 0;
   }
   .logo1 {
     height: 6vh;
@@ -309,35 +341,37 @@ header {
   }
 
   .content {
-    position: static;
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-left: 0;
+    margin-top: 0;
     margin-right: 2.5vw;
-    top: 0;
+    z-index: 12;
     align-items: flex-end;
   }
   .content2 {
-    position: static;
     display: flex;
     flex-direction: column;
     margin-left: 0;
     top: 0;
     margin-right: 2.5vw;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .content h1,
   .content h2 {
+    text-align: right;
     margin-top: 3vh;
     width: fit-content;
     color: var(--secondary-color);
     box-shadow: none;
     transition: none;
+
   }
 
   #iam {
-    margin-top: 40vh;
+    margin-top: 20vh;
   }
   .ilist {
     color: var(--secondary-color);
@@ -345,28 +379,53 @@ header {
     margin-bottom: 3vh;
   }
 
-  .content h1 {
-    margin-top: 45vh;
-    margin-bottom: 0;
-  }
-  .content h2 {
-  }
   .content h1:hover,
   .content h2:hover {
     box-shadow: none;
   }
 
   .icon {
-    position: absolute;
-    top: 0;
-    margin-top: 3vh;
-    height: 38vh;
+    display: none;
   }
 
-  #me {
-    margin-top: 0;
-    top: 170%;
+  #news-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
   }
+
+  .news-box {
+    border-radius: 20px;
+    width: 800px;
+    height: 700px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .news-box h1 {
+    font-size: 3vh;
+    margin: 3%;
+    color: var(--secondary-color);
+  }
+  .news-box h3 {
+    font-size: 1.6vh;
+    margin: 3%;
+    color: rgb(110, 110, 110);
+  }
+  .news-box p {
+    font-size: 2vh;
+    margin: 3%;
+    color: var(--secondary-color);
+  }
+  .news-box img {
+    margin: 3%;
+    width: 28%;
+  }
+  
 }
 
 @media only screen and (max-height: 620px) {
