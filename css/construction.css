@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ff9b00;
+  --secondary-color: #003c69;
+  /* --primary-color: #18995f;
+  --secondary-color: #0e7f4c; */
+}
+@font-face {
+  font-family: "helvetica";
+  src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+::-webkit-scrollbar{
+  width: 1;
+}
+
+body {
+  font-family: helvetica;
+}
+body h1{
+    font-size: 6vh;
+    color: var(--secondary-color);
+    z-index: 10;
+}
+body a{
+    font-size: 3vh;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    z-index: 10;
+}
+body a:active{
+    font-size: 3vh;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+body h1::selection, h2::selection, h3::selection, h4::selection, p::selection, img::selection, a::selection {
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+img{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
