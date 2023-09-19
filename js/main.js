@@ -18,29 +18,25 @@ const freiImg = document.createElement("img");
 freiImg.src = "../img/icon/3.png";
 freiImg.classList.add("icon");
 
+//changes the image on rightCircle
 const changeIcon = function (id) {
   switch (id) {
     case 1:
-      console.log("fort");
       leftCircle.innerHTML = "";
       leftCircle.appendChild(fortImg);
 
       break;
     case 2:
-      console.log("trad");
       leftCircle.innerHTML = "";
       leftCircle.appendChild(tradImg);
       break;
     case 3:
-      console.log("frei");
       leftCircle.innerHTML = "";
       leftCircle.appendChild(freiImg);
       break;
 
     default:
-      console.log("fort");
       leftCircle.appendChild(fortImg);
-
       break;
   }
 };

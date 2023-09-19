@@ -96,10 +96,8 @@ header {
 }
 
 #hero{
-  
 }
-#about {
-  width: 99vw;
+#about {  
   align-items: flex-end;
   justify-content: flex-end;
   margin-top: 20vh;
@@ -278,6 +276,7 @@ header {
   border-radius: 20px;
   width: 14vw;
   height: 14vw;
+  margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -285,26 +284,26 @@ header {
 
 .blog-box h1 {
   font-size: 20px;
-  margin: 3%;
+  margin: 4%;
   color: var(--secondary-color);
 }
 .blog-box h3 {
   font-size: 14px;
-  margin: 3%;
+  margin: 4%;
   color: rgb(110, 110, 110);
 }
 .blog-box p {
   font-size: 18px;
-  margin: 3%;
+  margin: 4%;
   color: var(--secondary-color);
 }
 .blog-box a {
   font-size: 18px;
-  margin: 3%;
+  margin: 4%;
   color: var(--secondary-color);
 }
 .blog-box img {
-  margin: 3%;
+  margin: 4%;
   width: 28%;
 }
 .blog-box .more{
