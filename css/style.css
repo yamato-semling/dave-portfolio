@@ -14,7 +14,7 @@
   src: url(../fonts/Helvetica-Font/Helvetica.ttf);
 }
 ::-webkit-scrollbar{
-  width: 1;
+  width: 0;
 }
 
 body {
@@ -309,6 +309,16 @@ header {
 .blog-box .more{
   color: rgb(110, 110, 110);
   text-decoration: underline;
+}
+
+.footer-hero{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-bottom: 0;
+}
+.footer-hero img{
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
