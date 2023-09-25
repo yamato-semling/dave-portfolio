@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ff9b00;
+  --secondary-color: #003c69;
+  /* --primary-color: #18995f;
+  --secondary-color: #0e7f4c; */
+}
+@font-face {
+  font-family: "helvetica";
+  src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+::-webkit-scrollbar{
+  width: 1;
+}
+
+.impressum-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .impressum-content p {
+    font-size: 30px;
+    margin: 10px;
+  }
+  

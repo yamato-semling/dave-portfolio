@@ -17,6 +17,22 @@
   width: 0;
 }
 
+#loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+}
+#loading img{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+main{
+  display: none;
+}
+
 body {
   font-family: helvetica;
 }
