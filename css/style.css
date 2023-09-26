@@ -18,19 +18,19 @@
   width: 0;
 }
 
-#loading{
+#loading {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   height: 100vh;
 }
-#loading img{
+#loading img {
   position: absolute;
   bottom: 0;
   width: 100vw;
 }
 
-main{
+main {
   display: none;
 }
 
@@ -94,12 +94,11 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
-.left-circle img{
+.left-circle img {
   height: 50%;
   width: 90%;
   border-radius: 47vh 0 0 47vh;
 }
-
 
 .hero-text {
   margin-top: 20vh;
@@ -129,7 +128,6 @@ header {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
-
 
 #about {
   align-items: flex-end;
@@ -169,8 +167,6 @@ header {
   right: 0;
 }
 
-
-
 .content2 {
   margin-left: 3vw;
 }
@@ -189,7 +185,6 @@ header {
   width: 100vw;
   margin-right: 3vw;
 }
-
 
 .contents {
   display: flex;
@@ -300,11 +295,12 @@ header {
 }
 .blog-box {
   border-radius: 20px;
-  width: 310px;
-  height: 310px;
+  width: 320px;
+  height: 320px;
   padding: 18px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -330,6 +326,15 @@ header {
 }
 .blog-box img {
   width: 28%;
+}
+.div-testimonials {
+  display: flex;
+  justify-content: center;
+}
+.blog-box .testemonials {
+  width: 220px;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
 }
 .blog-box .more {
   color: rgb(110, 110, 110);
@@ -360,29 +365,34 @@ header {
 }
 
 .footer-text p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: black;
 }
 
 .footer-text a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: black;
 }
 
-.socials{
+.socials {
   position: absolute;
   margin: 12px;
   right: 0;
+  text-align: right;
 }
 
-.socials a img {
+.socials h2 {
+  font-size: 1.4rem;
+}
+
+.socials-icon a img {
   width: 50px;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
-  #loading img{
+  #loading img {
     display: none;
   }
 
@@ -414,9 +424,8 @@ header {
     margin: 0;
   }
 
-  #about-content .content{
+  #about-content .content {
     margin-top: 0;
-
   }
 
   #hero-img {
@@ -505,11 +514,20 @@ header {
   .box {
     border-radius: 20px;
     width: 90vw;
-    height: 45vh;
+    height: 750h;
     margin-top: 40px;
     margin-left: 0;
     margin-right: 0;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  }
+  .box h1 {
+    font-size: 2rem;
+  }
+  .box h3 {
+    font-size: 1rem;
+  }
+  .box p {
+    font-size: 1.2rem;
   }
 
   .content-box {
@@ -574,39 +592,65 @@ header {
   }
   .blog-box {
     border-radius: 20px;
-    width: 38vw;
-    height: 34vh;
+    width: 140px;
+    height: 220px;
     margin-top: 3vh;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
   .blog-box h1 {
     font-size: 1rem;
-    margin: 3%;
     color: var(--secondary-color);
   }
   .blog-box h3 {
     font-size: 0.8rem;
-    margin: 3%;
     color: rgb(110, 110, 110);
   }
   .blog-box p {
     font-size: 1rem;
-    margin: 3%;
     color: var(--secondary-color);
   }
   .blog-box a {
     font-size: 1rem;
-    margin: 3%;
     color: var(--secondary-color);
   }
   .blog-box img {
     margin: 3%;
     width: 28%;
   }
+  .blog-box a {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .blog-box .testemonials {
+    margin: 0;
+    width: 110px;
+    border-radius: 20px;
+  }
   .blog-box .more {
     color: rgb(110, 110, 110);
     text-decoration: underline;
+  }
+
+  .socials {
+    margin-bottom: 0;
+  }
+
+  .socials h2 {
+    display: none;
+  }
+
+  .socials-icon a img {
+    width: 35px;
+  }
+
+  footer {
+    height: 20vh;
+  }
+
+  #footer-img {
+    display: none;
   }
 }
 
