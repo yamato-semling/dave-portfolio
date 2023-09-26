@@ -7,10 +7,10 @@
     <script src="js/main.js" defer></script>
     <title>David Berner</title>
   </head>
-  <body onload="changeIcon()">
+  <body>
     <div id="loading">
       <h1 class="title">Loading...</h1>
-      <img id="footer-img" src="./img/haikei/wave2.svg" alt="wave" />
+      <img id="loading-img" src="./img/haikei/wave2.svg" alt="wave" />
     </div>
     <main>
       <section id="hero">
@@ -42,27 +42,23 @@
           <div class="hero-text">
             <h1>David Berner</h1>
             <h2>Jung</h2>
-            <h2>Brutal</h2>
-            <h2>Gutaussehend</h2>
+            <h2>Ambitioniert</h2>
+            <h2>Bodenständig</h2>
           </div>
         </div>
       </section>
 
       <section id="about">
         <div id="about-content">
-          <div class="left-circle icon-circle"></div>
+          <div class="left-circle icon-circle">
+            <img src="./img/icon/schweiz.avif" alt="" />
+          </div>
         </div>
         <div class="content">
           <h1 class="title">Meine Werte</h1>
-          <h2 class="subtitle" id="fortschritt" onmouseover="changeIcon(1)">
-            Fortschritt
-          </h2>
-          <h2 class="subtitle" id="tradition" onmouseover="changeIcon(2)">
-            Tradition
-          </h2>
-          <h2 class="subtitle" id="freiheit" onmouseover="changeIcon(3)">
-            Freiheit
-          </h2>
+          <h2 class="subtitle">Tradition & Fortschritt</h2>
+          <h2 class="subtitle">Familie & Zusammenhalt</h2>
+          <h2 class="subtitle">Freiheit & Verantwortung</h2>
         </div>
       </section>
       <section id="me">
@@ -83,7 +79,7 @@
               /></a>
             </div>
             <div class="box">
-              <h1>Präsident Junge Mitte Emmental-Oberaargau</h1>
+              <h1>Präsident der Jungen Mitte Emmental-Oberaargau</h1>
               <h3>2022 - Heute</h3>
               <p>
                 Seit 2022 habe ich die Ehre als Präsident der Junge Mitte
@@ -113,8 +109,8 @@
               <h1>Bertholdia</h1>
               <h3>2021 - Heute</h3>
               <p>
-                Ich bin aktives Mitglied der Gymnasialverbindung Bertholdia, des
-                Gymnasium Burgdorfs.
+                Aktives Mitglied der Mittelschulverbindung des Gymnasium
+                Burgdorf, der Bertholdia.
               </p>
               <a
                 target="_blank"
@@ -128,14 +124,14 @@
             <div class="box">
               <h1>Jungschütze Schützenclub Kirchberg</h1>
               <h3>2023 - Heute</h3>
-              <p>Jungschütze bei Schützenclub Kirchberg.</p>
+              <p>Jungschütze beim Schützenclub Kirchberg.</p>
             </div>
             <div class="box">
               <h1>Vorstand Jugendforum Ämmitau</h1>
               <h3>2021 - Heute</h3>
               <p>
-                Ich setze mich für die Förderung und die politischen Bildung der
-                Jugendlichen aus dem Berner Wahlkreis Emmental ein.
+                Ich setze mich für die Förderung und die Bildung der
+                Jugendlichen im Emmental ein.
               </p>
               <a target="_blank" href="https://www.jugendforum-aemmitau.ch/"
                 ><img
@@ -201,8 +197,16 @@
         <img id="footer-img" src="./img/haikei/wave2.svg" alt="wave" />
         <div class="footer-content">
           <div class="footer-text">
-            <a href="html/impressum.html">Impressum</a>
+            <a href="page/impressum/">Impressum</a>
           </div>
+        </div>
+        <div class="socials">
+          <a target="_blank" href="https://www.instagram.com/davidladaberner/"
+            ><img src="/img/icon/instagram.svg" alt=""
+          /></a>
+          <a target="_blank" href="https://www.facebook.com/david.berner.3511"
+            ><img src="/img/icon/facebook.svg" alt=""
+          /></a>
         </div>
       </footer>
     </main>

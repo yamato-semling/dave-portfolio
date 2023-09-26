@@ -8,6 +8,7 @@
 :root {
   --primary-color: #ff9b00;
   --secondary-color: #003c69;
+  font-size: 16px;
 }
 @font-face {
   font-family: "helvetica";
@@ -67,13 +68,13 @@ header {
   justify-content: flex-end;
   flex-direction: row;
   align-items: center;
-  gap: 2vw;
+  gap: 40px;
 }
 .logo1 {
-  height: 9vh;
+  height: 100px;
 }
 .logo2 {
-  height: 6vh;
+  height: 80px;
 }
 
 .right-circle {
@@ -87,36 +88,49 @@ header {
   margin: 0;
   background-color: var(--primary-color);
   height: 100vh;
-  width: 60vw;
+  width: 45vw;
+  border-radius: 47vh 0 0 47vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.left-circle img{
+  height: 50%;
+  width: 90%;
   border-radius: 47vh 0 0 47vh;
 }
+
 
 .hero-text {
   margin-top: 20vh;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .hero-text h1 {
   color: var(--secondary-color);
-  font-size: 10vh;
+  width: 40vw;
+  font-size: 11vh;
   margin-bottom: 4vh;
 }
 .hero-text h2 {
   color: var(--secondary-color);
-  font-size: 6.5vh;
+  font-size: 7vh;
 }
 
 .title {
   color: var(--secondary-color);
-  font-size: 10vh;
+  font-size: 6rem;
   margin-bottom: 3vh;
 }
 .subtitle {
   color: var(--secondary-color);
-  font-size: 6.5vh;
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
-#hero {
-}
+
 #about {
   align-items: flex-end;
   justify-content: flex-end;
@@ -145,7 +159,7 @@ header {
 }
 .content h1:hover,
 .content h2:hover {
-  box-shadow: inset 30vw 0 0 0 var(--primary-color);
+  box-shadow: inset 100vw 0 0 0 var(--primary-color);
   color: var(--secondary-color);
   cursor: pointer;
 }
@@ -155,14 +169,7 @@ header {
   right: 0;
 }
 
-.icon {
-  height: 50vh;
-}
-.icon-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .content2 {
   margin-left: 3vw;
@@ -171,11 +178,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.ilist {
-  color: var(--secondary-color);
-  font-size: 6vh;
 }
 
 #hero-content {
@@ -187,8 +189,7 @@ header {
   width: 100vw;
   margin-right: 3vw;
 }
-#hero-right {
-}
+
 
 .contents {
   display: flex;
@@ -212,26 +213,31 @@ header {
   margin-top: 40px;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 18px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .box h1 {
-  font-size: 30px;
-  margin: 3%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: var(--secondary-color);
 }
 .box h3 {
-  font-size: 16px;
-  margin: 3%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: rgb(110, 110, 110);
 }
 .box p {
-  font-size: 18px;
-  margin: 3%;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+.box a {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
   color: var(--secondary-color);
 }
 .box img {
-  margin: 3%;
   width: 160px;
 }
 .box-border {
@@ -253,36 +259,37 @@ header {
   border-radius: 20px;
   width: 40.5vw;
   height: 60vh;
+  padding: 18px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .news-box h1 {
-  font-size: 3vh;
-  margin: 3%;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   color: var(--secondary-color);
 }
 .news-box h3 {
-  font-size: 1.6vh;
-  margin: 3%;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   color: rgb(110, 110, 110);
 }
 .news-box p {
-  font-size: 2vh;
-  margin: 3%;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   color: var(--secondary-color);
 }
 .news-box img {
-  margin: 3%;
   width: 28%;
 }
 .news-box a {
-  font-size: 18px;
-  margin: 3%;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   color: var(--secondary-color);
 }
 .news-box .more {
   color: rgb(110, 110, 110);
   text-decoration: underline;
+  font-size: 1.4rem;
 }
 
 .blogs {
@@ -293,36 +300,35 @@ header {
 }
 .blog-box {
   border-radius: 20px;
-  width: 14vw;
-  height: 14vw;
-  margin-bottom: 10px;
+  width: 310px;
+  height: 310px;
+  padding: 18px;
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .blog-box h1 {
-  font-size: 20px;
-  margin: 4%;
+  font-size: 1.6rem;
   color: var(--secondary-color);
+  margin-bottom: 0.5rem;
 }
 .blog-box h3 {
-  font-size: 14px;
-  margin: 4%;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
   color: rgb(110, 110, 110);
 }
 .blog-box p {
-  font-size: 18px;
-  margin: 4%;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   color: var(--secondary-color);
 }
 .blog-box a {
-  font-size: 18px;
-  margin: 4%;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   color: var(--secondary-color);
 }
 .blog-box img {
-  margin: 4%;
   width: 28%;
 }
 .blog-box .more {
@@ -354,17 +360,31 @@ header {
 }
 
 .footer-text p {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: black;
 }
 
 .footer-text a {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: black;
+}
+
+.socials{
+  position: absolute;
+  margin: 12px;
+  right: 0;
+}
+
+.socials a img {
+  width: 50px;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+
+  #loading img{
+    display: none;
+  }
 
   .hero-text {
     display: flex;
@@ -372,18 +392,18 @@ header {
     align-items: flex-start;
     text-align: left;
     margin-left: 4vw;
-    margin-top: 0;
+    margin-top: 4vh;
   }
   .hero-text h1 {
     color: var(--secondary-color);
-    font-size: 8vh;
+    font-size: 4rem;
     width: 50vw;
     margin-bottom: 3vh;
     text-align: left;
   }
   .hero-text h2 {
     color: var(--secondary-color);
-    font-size: 4vh;
+    font-size: 2.4rem;
     text-align: left;
   }
 
@@ -392,6 +412,11 @@ header {
     align-items: flex-end;
     justify-content: flex-end;
     margin: 0;
+  }
+
+  #about-content .content{
+    margin-top: 0;
+
   }
 
   #hero-img {
@@ -417,29 +442,35 @@ header {
     border-radius: 0 0 0 75%;
   }
 
-  #about-content {
-    position: absolute;
-    right: 0;
+  .left-circle img {
+    display: none;
   }
 
   .title {
     margin-top: 0;
     color: var(--secondary-color);
-    font-size: 8vh;
+    font-size: 4rem;
   }
   .subtitle {
     color: var(--secondary-color);
-    font-size: 4vh;
+    font-size: 2.2rem;
   }
 
   #logos {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin-bottom: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    z-index: 3;
   }
   .logo1 {
-    height: 6vh;
+    height: 70px;
   }
   .logo2 {
-    height: 3.5vh;
+    height: 30px;
   }
 
   .content {
@@ -486,19 +517,9 @@ header {
     justify-content: center;
   }
 
-  .ilist {
-    color: var(--secondary-color);
-    font-size: 4vh;
-    margin-bottom: 3vh;
-  }
-
   .content h1:hover,
   .content h2:hover {
     box-shadow: none;
-  }
-
-  .icon {
-    display: none;
   }
 
   #news-content {
@@ -522,19 +543,23 @@ header {
   }
 
   .news-box h1 {
-    font-size: 3vh;
+    font-size: 1.8rem;
     margin: 3%;
     color: var(--secondary-color);
   }
   .news-box h3 {
-    font-size: 1.6vh;
+    font-size: 1rem;
     margin: 3%;
     color: rgb(110, 110, 110);
   }
   .news-box p {
-    font-size: 2vh;
+    font-size: 1.2rem;
     margin: 3%;
     color: var(--secondary-color);
+  }
+  .news-box a {
+    font-size: 1.2rem;
+    margin: 3%;
   }
   .news-box img {
     margin: 3%;
@@ -556,22 +581,22 @@ header {
   }
 
   .blog-box h1 {
-    font-size: 16px;
+    font-size: 1rem;
     margin: 3%;
     color: var(--secondary-color);
   }
   .blog-box h3 {
-    font-size: 10px;
+    font-size: 0.8rem;
     margin: 3%;
     color: rgb(110, 110, 110);
   }
   .blog-box p {
-    font-size: 14px;
+    font-size: 1rem;
     margin: 3%;
     color: var(--secondary-color);
   }
   .blog-box a {
-    font-size: 14px;
+    font-size: 1rem;
     margin: 3%;
     color: var(--secondary-color);
   }
