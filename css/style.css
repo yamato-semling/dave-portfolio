@@ -8,6 +8,7 @@
 :root {
   --primary-color: #ff9b00;
   --secondary-color: #003c69;
+  --tertiary-color: ;
   font-size: 16px;
 }
 @font-face {
@@ -16,6 +17,10 @@
 }
 ::-webkit-scrollbar {
   width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 #loading {
@@ -34,6 +39,7 @@ main {
   display: none;
 }
 
+
 body {
   font-family: helvetica;
 }
@@ -46,6 +52,140 @@ img::selection,
 a::selection {
   color: white;
   background-color: var(--secondary-color);
+}
+
+.container {
+  max-width: 1050px;
+  width: 20vw;
+  margin: auto;
+}
+
+.navbar {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--secondary-color);
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  background-color: var(--secondary-color);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+  background: var(--primary-color);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+  background: var(--primary-color);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
 }
 
 #hero-img {
@@ -135,6 +275,9 @@ header {
   margin-top: 20vh;
 }
 #me {
+  margin-top: 20vh;
+}
+#politics{
   margin-top: 20vh;
 }
 #news {
@@ -239,6 +382,59 @@ header {
   border-radius: 20px;
 }
 
+.politic-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.politic-content-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.politic-box {
+  border-radius: 20px;
+  width: 560px;
+  height: 440px;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 18px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.politic-box h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+.politic-box h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(110, 110, 110);
+}
+.politic-box p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+.politic-box a {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+.politic-box img {
+  width: 160px;
+}
+.politic-box-border {
+  border-radius: 20px;
+}
+
 .news-content-box {
   display: flex;
   flex-direction: row;
@@ -252,7 +448,7 @@ header {
 
 .news-box {
   border-radius: 20px;
-  width: 40.5vw;
+  width: 35vw;
   height: 60vh;
   padding: 18px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -289,14 +485,14 @@ header {
 
 .blogs {
   display: flex;
-  width: 46.5vw;
+  width: 56vw;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .blog-box {
   border-radius: 20px;
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   padding: 18px;
   margin-left: 10px;
   margin-right: 10px;
@@ -332,7 +528,7 @@ header {
   justify-content: center;
 }
 .blog-box .testemonials {
-  width: 220px;
+  width: 320px;
   border-radius: 20px;
   margin-bottom: 0.5rem;
 }
@@ -392,6 +588,12 @@ header {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 
+  .container {
+    max-width: 1050px;
+    width: 110vw;
+    margin: auto;
+  }
+
   #loading img {
     display: none;
   }
@@ -402,7 +604,7 @@ header {
     align-items: flex-start;
     text-align: left;
     margin-left: 4vw;
-    margin-top: 4vh;
+    margin-top: 6vh;
   }
   .hero-text h1 {
     color: var(--secondary-color);
@@ -429,7 +631,7 @@ header {
   }
 
   #hero-img {
-    height: 45vh;
+    height: 42vh;
     width: auto;
     z-index: 10;
     user-select: none;
