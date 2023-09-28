@@ -13,8 +13,12 @@
   </head>
   <body>
     <div id="loading">
-      <h1 class="title">Loading...</h1>
-      <img id="loading-img" src="./img/haikei/wave2.svg" alt="wave" />
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
     <main>
       <header>
@@ -91,7 +95,7 @@
             <img src="./img/icon/schweiz.avif" alt="" />
           </div>
         </div>
-        <div class="content">
+        <div class="content" id="werte">
           <h1 class="title">Meine Werte</h1>
           <h2 class="subtitle">Tradition & Fortschritt</h2>
           <h2 class="subtitle">Familie & Zusammenhalt</h2>
@@ -100,18 +104,47 @@
       </section>
 
       <section id="politics">
-        <div class="content3">
+        <div class="politic-content">
           <h1 class="title">Politische Schwerpunkte</h1>
         </div>
-        <div></div>
+        <div class="politic-content-box">
+          <div class="politic-box">
+            <h1></h1>
+            <p></p>
+          </div>
+          <div class="politic-box">
+            <h1></h1>
+            <p></p>
+          </div>
+          <div class="politic-box">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
       </section>
 
       <section id="news">
         <div class="content3">
           <h1 class="title">Aktuell</h1>
         </div>
-        <div class="news-content-box">
-          <div class="news-box">
+        <div class="blogs">
+          <div class="blog-box">
+            <h1>Prämien senken</h1>
+            <h3>26. 09. 2023</h3>
+            <div class="div-testimonials">
+              <a
+                target="_blank"
+                href="https://kostenbremse-jetzt.ch/"
+                class="more"
+                ><img
+                  class="testemonials"
+                  src="/img/testemonials/prämien1.jpg"
+                  alt="testemonial"
+              /></a>
+            </div>
+          </div>
+
+          <div class="blog-box">
             <h1>Nationalratswahlen 2023</h1>
             <h3>19. 09. 2023</h3>
             <p>
@@ -121,28 +154,11 @@
             <a href="page/construction/" class="more">mehr...</a>
           </div>
 
-          <div class="blogs">
-            <div class="blog-box">
-              <h1>Prämien senken</h1>
-              <h3>26. 09. 2023</h3>
-              <div class="div-testimonials">
-                <a
-                  target="_blank"
-                  href="https://kostenbremse-jetzt.ch/"
-                  class="more"
-                  ><img
-                    class="testemonials"
-                    src="/img/testemonials/prämien1.jpg"
-                    alt="testemonial"
-                /></a>
-              </div>
-            </div>
-            <div class="blog-box">
-              <h1>Bertholdia Reise</h1>
-              <h3>19. 09. 2023</h3>
-              <p>Reise mit der Bertholdia.</p>
-              <a href="page/construction/" class="more">mehr...</a>
-            </div>
+          <div class="blog-box">
+            <h1>Bertholdia Reise</h1>
+            <h3>19. 09. 2023</h3>
+            <p>Reise mit der Bertholdia.</p>
+            <a href="page/construction/" class="more">mehr...</a>
           </div>
         </div>
       </section>

@@ -24,21 +24,53 @@ html {
 }
 
 #loading {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-#loading img {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
 }
 
 main {
   display: none;
 }
 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 body {
   font-family: helvetica;
@@ -284,6 +316,11 @@ header {
   margin-top: 20vh;
 }
 
+#werte {
+  width: 50vw;
+  max-height: 100vh;
+}
+
 .content {
   display: flex;
   height: 100vh;
@@ -294,16 +331,9 @@ header {
 .content h1,
 .content h2 {
   width: fit-content;
-  box-shadow: inset 0 0 0 0 var(--primary-color);
   color: var(--secondary-color);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.content h1:hover,
-.content h2:hover {
-  box-shadow: inset 100vw 0 0 0 var(--primary-color);
-  color: var(--secondary-color);
-  cursor: pointer;
-}
+
 
 #about-content {
   position: absolute;
@@ -435,64 +465,18 @@ header {
   border-radius: 20px;
 }
 
-.news-content-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 94vw;
-  margin-top: 30px;
-  margin-right: 3vw;
-  margin-left: 3vw;
-}
-
-.news-box {
-  border-radius: 20px;
-  width: 35vw;
-  height: 60vh;
-  padding: 18px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-}
-
-.news-box h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: var(--secondary-color);
-}
-.news-box h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: rgb(110, 110, 110);
-}
-.news-box p {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: var(--secondary-color);
-}
-.news-box img {
-  width: 28%;
-}
-.news-box a {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: var(--secondary-color);
-}
-.news-box .more {
-  color: rgb(110, 110, 110);
-  text-decoration: underline;
-  font-size: 1.4rem;
-}
-
 .blogs {
   display: flex;
-  width: 56vw;
+  width: 96vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .blog-box {
   border-radius: 20px;
-  width: 420px;
-  height: 420px;
+  width: 450px;
+  height: 450px;
   padding: 18px;
   margin-left: 10px;
   margin-right: 10px;
@@ -528,7 +512,7 @@ header {
   justify-content: center;
 }
 .blog-box .testemonials {
-  width: 320px;
+  width: 335px;
   border-radius: 20px;
   margin-bottom: 0.5rem;
 }
@@ -604,7 +588,7 @@ header {
     align-items: flex-start;
     text-align: left;
     margin-left: 4vw;
-    margin-top: 6vh;
+    margin-top: 8vh;
   }
   .hero-text h1 {
     color: var(--secondary-color);
@@ -621,9 +605,12 @@ header {
 
   #about {
     width: 99vw;
+    height: 75vh;
+    display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     margin: 0;
+    text-align: right;
   }
 
   #about-content .content {
@@ -631,7 +618,7 @@ header {
   }
 
   #hero-img {
-    height: 42vh;
+    height: 40vh;
     width: auto;
     z-index: 10;
     user-select: none;
@@ -649,7 +636,6 @@ header {
     margin-top: 0;
     height: 100vh;
     width: 100vw;
-    margin-top: 0;
     border-radius: 0 0 0 75%;
   }
 
@@ -681,19 +667,29 @@ header {
     height: 70px;
   }
   .logo2 {
-    height: 30px;
+    height: 22px;
   }
 
-  .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
+  #werte{
     margin-top: 0;
-    margin-right: 2.5vw;
+    width: 90vw;
     z-index: 12;
+    display: flex;
     align-items: flex-end;
+    margin-right: 2.5vw;
   }
+
+  .politic-content {
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    text-align: center;
+  }
+
+  .politic-content .title{
+    font-size: 3.4rem;
+  }
+
   .content2 {
     display: flex;
     flex-direction: column;
@@ -742,61 +738,20 @@ header {
     box-shadow: none;
   }
 
-  #news-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .news-box {
-    border-radius: 20px;
-    width: 90vw;
-    height: 60vh;
-    margin-top: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .news-box h1 {
-    font-size: 1.8rem;
-    margin: 3%;
-    color: var(--secondary-color);
-  }
-  .news-box h3 {
-    font-size: 1rem;
-    margin: 3%;
-    color: rgb(110, 110, 110);
-  }
-  .news-box p {
-    font-size: 1.2rem;
-    margin: 3%;
-    color: var(--secondary-color);
-  }
-  .news-box a {
-    font-size: 1.2rem;
-    margin: 3%;
-  }
-  .news-box img {
-    margin: 3%;
-    width: 28%;
-  }
-
   .blogs {
     display: flex;
-    width: 90vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
   }
   .blog-box {
     border-radius: 20px;
-    width: 140px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     margin-top: 3vh;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   }
 
@@ -817,7 +772,6 @@ header {
     color: var(--secondary-color);
   }
   .blog-box img {
-    margin: 3%;
     width: 28%;
   }
   .blog-box a {
@@ -827,7 +781,7 @@ header {
   }
   .blog-box .testemonials {
     margin: 0;
-    width: 110px;
+    width: 215px;
     border-radius: 20px;
   }
   .blog-box .more {
