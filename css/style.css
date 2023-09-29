@@ -315,10 +315,12 @@ header {
 #news {
   margin-top: 20vh;
 }
-
-#werte {
+#values {
   width: 50vw;
   max-height: 100vh;
+}
+#posters {
+  margin-top: 20vh;
 }
 
 .content {
@@ -511,7 +513,7 @@ header {
   display: flex;
   justify-content: center;
 }
-.blog-box .testemonials {
+.blog-box .testimonials {
   width: 335px;
   border-radius: 20px;
   margin-bottom: 0.5rem;
@@ -567,6 +569,41 @@ header {
 
 .socials-icon a img {
   width: 50px;
+}
+
+.posters-content{
+  width: 94vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.poster{
+  height: 470px;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.poster img{
+  height: 420px;
+  width: auto;
+  border-radius: 20px;
+}
+.poster a{
+  margin-top: 6px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.poster a:hover {
+  opacity: 0.75;
 }
 
 @media only screen and (max-width: 768px) {
@@ -670,9 +707,8 @@ header {
     height: 22px;
   }
 
-  #werte{
-    margin-top: 0;
-    width: 90vw;
+  #values{
+    width: 95vw;
     z-index: 12;
     display: flex;
     align-items: flex-end;
@@ -779,7 +815,7 @@ header {
     display: flex;
     justify-content: center;
   }
-  .blog-box .testemonials {
+  .blog-box .testimonials {
     margin: 0;
     width: 215px;
     border-radius: 20px;
@@ -799,6 +835,36 @@ header {
 
   .socials-icon a img {
     width: 35px;
+  }
+
+
+  .posters-content{
+    width: 94vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+  }
+  
+  .poster{
+    height: 250px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .poster img{
+    height: 200px;
+    width: auto;
+    border-radius: 20px;
+  }
+  .poster a{
+    margin-top: 6px;
+    color: var(--primary-color);
   }
 
   footer {
