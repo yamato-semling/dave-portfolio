@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #ff9b00;
+  --secondary-color: #003c69;
+  --tertiary-color: ;
+  font-size: 16px;
+}
+@font-face {
+  font-family: "helvetica";
+  src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: helvetica;
+}
+
+body h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: var(--secondary-color);
+}
+
+body h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+img::selection,
+a::selection {
+  color: white;
+  background-color: var(--secondary-color);
+}
